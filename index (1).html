@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Portfolio of Moolumuri Srivarsha — Electronics Engineering student focused on VLSI, RTL design, verification and embedded systems.">
+<title>Moolumuri Srivarsha | VLSI & Embedded Systems</title>
+<style>
+:root{--bg:#08111f;--panel:#101d30;--panel2:#14243a;--text:#edf5ff;--muted:#a9bad0;--line:rgba(185,211,240,.15);--cyan:#64e4e8;--violet:#a99bff;--lime:#c7f36b;--max:1120px}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:radial-gradient(ellipse at 80% 0%,#192b49 0,transparent 35%),var(--bg);color:var(--text);font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;line-height:1.6}
+a{color:inherit;text-decoration:none}.wrap{width:min(var(--max),calc(100% - 40px));margin:auto}
+header{position:sticky;top:0;z-index:10;background:rgba(8,17,31,.82);backdrop-filter:blur(16px);border-bottom:1px solid var(--line)}
+nav{height:72px;display:flex;align-items:center;justify-content:space-between}.brand{font-weight:800;letter-spacing:.04em}.brand span{color:var(--cyan)}.navlinks{display:flex;gap:25px;color:var(--muted);font-size:.92rem}.navlinks a:hover{color:var(--cyan)}.menu{display:none;background:none;border:1px solid var(--line);color:var(--text);padding:8px 12px;border-radius:10px}
+.hero{padding:92px 0 82px;display:grid;grid-template-columns:1.35fr .65fr;gap:50px;align-items:center;min-height:570px}.eyebrow{color:var(--cyan);font-weight:700;letter-spacing:.16em;text-transform:uppercase;font-size:.78rem}.hero h1{font-size:clamp(2.7rem,6vw,5.2rem);line-height:1.04;letter-spacing:-.055em;margin:18px 0}.hero h1 em{font-style:normal;color:var(--cyan)}.hero p{max-width:650px;color:var(--muted);font-size:1.1rem}.actions{display:flex;gap:13px;flex-wrap:wrap;margin-top:30px}.btn{padding:12px 19px;border-radius:12px;font-weight:700;border:1px solid var(--line);display:inline-flex;gap:9px;align-items:center}.primary{background:var(--cyan);color:#07131d;border-color:var(--cyan)}.btn:hover{transform:translateY(-2px);transition:.2s}.profile-card{background:linear-gradient(145deg,rgba(100,228,232,.13),rgba(169,155,255,.08));border:1px solid var(--line);border-radius:28px;padding:28px;position:relative;overflow:hidden;min-height:320px;display:flex;flex-direction:column;justify-content:space-between}.profile-card:before{content:"";position:absolute;width:230px;height:230px;border:1px solid rgba(100,228,232,.28);border-radius:50%;right:-75px;top:-75px;box-shadow:0 0 0 28px rgba(100,228,232,.035),0 0 0 58px rgba(100,228,232,.025)}.monogram{width:112px;height:112px;border-radius:28px;background:linear-gradient(135deg,var(--cyan),var(--violet));color:#08111f;display:grid;place-items:center;font-size:2.5rem;font-weight:900;letter-spacing:-.08em}.profile-card small{color:var(--cyan);letter-spacing:.14em;text-transform:uppercase;font-weight:700}.profile-card h3{font-size:1.6rem;margin:8px 0 3px}.profile-card p{margin:0;color:var(--muted);font-size:.95rem}
+.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:18px}.stat{padding:18px;background:rgba(16,29,48,.7);border:1px solid var(--line);border-radius:16px}.stat strong{display:block;font-size:1.55rem;color:var(--cyan)}.stat span{color:var(--muted);font-size:.82rem}
+section{padding:76px 0;border-top:1px solid var(--line)}.section-head{display:flex;justify-content:space-between;align-items:end;gap:20px;margin-bottom:30px}.kicker{color:var(--cyan);font-size:.75rem;letter-spacing:.16em;text-transform:uppercase;font-weight:800}.section-head h2{font-size:clamp(2rem,4vw,3rem);letter-spacing:-.04em;margin:5px 0 0}.section-head p{color:var(--muted);max-width:450px;margin:0}
+.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px}.card{background:var(--panel);border:1px solid var(--line);border-radius:20px;padding:25px}.card p{color:var(--muted);margin:0}.focus{display:flex;flex-wrap:wrap;gap:9px;margin-top:18px}.pill{font-size:.82rem;color:#dffbfc;border:1px solid rgba(100,228,232,.25);background:rgba(100,228,232,.07);padding:7px 11px;border-radius:999px}
+.projects{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}.project{background:linear-gradient(145deg,var(--panel),#0d192a);border:1px solid var(--line);border-radius:20px;padding:25px;display:flex;flex-direction:column;min-height:255px}.project-top{display:flex;justify-content:space-between;gap:12px;align-items:start}.number{color:var(--cyan);font-weight:800;font-size:.85rem}.project h3{font-size:1.2rem;line-height:1.35;margin:13px 0 9px}.project p{color:var(--muted);font-size:.94rem;margin:0 0 20px}.tags{display:flex;gap:8px;flex-wrap:wrap;margin-top:auto}.tag{font-size:.75rem;color:var(--muted);background:var(--panel2);padding:5px 9px;border-radius:7px}
+.skills-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:15px}.skill h3{margin:0 0 13px;font-size:1rem}.skill p{color:var(--muted);margin:0}.skill .pill{display:inline-block;margin:0 6px 8px 0}
+.timeline{display:grid;gap:14px}.timeline-item{display:grid;grid-template-columns:150px 1fr;gap:20px;padding:22px 0;border-bottom:1px solid var(--line)}.timeline-item:last-child{border:0}.year{color:var(--cyan);font-weight:800}.timeline-item h3{margin:0 0 5px;font-size:1.05rem}.timeline-item p{margin:0;color:var(--muted);font-size:.93rem}
+.contact-box{background:linear-gradient(120deg,rgba(100,228,232,.12),rgba(169,155,255,.1));border:1px solid var(--line);border-radius:24px;padding:34px;display:flex;align-items:center;justify-content:space-between;gap:24px}.contact-box h2{font-size:2rem;margin:0 0 8px}.contact-box p{color:var(--muted);margin:0}.contact-links{display:flex;gap:10px;flex-wrap:wrap}
+footer{padding:26px 0;color:var(--muted);font-size:.85rem}.foot{display:flex;justify-content:space-between;gap:15px;flex-wrap:wrap}
+@media(max-width:800px){.hero{grid-template-columns:1fr;padding:65px 0}.profile-card{min-height:250px}.navlinks{display:none;position:absolute;top:72px;left:0;right:0;background:#0b1727;padding:20px;flex-direction:column;border-bottom:1px solid var(--line)}.navlinks.open{display:flex}.menu{display:block}.projects,.about-grid,.skills-grid{grid-template-columns:1fr}.section-head{display:block}.section-head p{margin-top:12px}.contact-box{display:block}.contact-links{margin-top:20px}.stats{gap:8px}.stat{padding:13px}.timeline-item{grid-template-columns:1fr;gap:4px}}
+@media(max-width:430px){.wrap{width:min(100% - 28px,var(--max))}.hero h1{font-size:2.8rem}.stats{grid-template-columns:1fr}.stat{display:flex;align-items:center;justify-content:space-between}.contact-box{padding:24px}}
+</style>
+</head>
+<body>
+<header><div class="wrap"><nav>
+<a class="brand" href="#home">SRIVARSHA<span>.</span></a>
+<div class="navlinks" id="navlinks"><a href="#about">About</a><a href="#projects">Projects</a><a href="#skills">Skills</a><a href="#journey">Journey</a><a href="#contact">Contact</a></div>
+<button class="menu" id="menu" aria-label="Toggle navigation">Menu</button>
+</nav></div></header>
+<main>
+<div class="wrap">
+<section class="hero" id="home" style="border:0">
+<div>
+<div class="eyebrow">Electronics Engineering · VLSI Design & Technology</div>
+<h1>Hi, I’m<br><em>Moolumuri Srivarsha.</em></h1>
+<p>I’m an Electronics Engineering student interested in RTL design, VLSI, digital systems and embedded hardware. I enjoy turning concepts into working designs and verifying them through simulation and hands-on projects.</p>
+<div class="actions"><a class="btn primary" href="#projects">Explore my work ↗</a><a class="btn" href="mailto:moolumurisrivarsha7225@gmail.com">Let’s connect</a></div>
+<div class="stats">
+<div class="stat"><strong>8.43</strong><span>Current CGPA</span></div>
+<div class="stat"><strong>RTL</strong><span>Project experience</span></div>
+<div class="stat"><strong>VLSI</strong><span>Design focus</span></div>
+</div>
+</div>
+<div class="profile-card"><div class="monogram">MS</div><div><small>My focus</small><h3>Design. Verify. Build.</h3><p>VLSI · RTL · Verification · Embedded Systems</p></div></div>
+</section>
+
+<section id="about">
+<div class="section-head"><div><div class="kicker">01 / About me</div><h2>Curious by design.</h2></div><p>Building a strong foundation in digital design and hardware development, one project at a time.</p></div>
+<div class="about-grid">
+<div class="card"><p>I’m pursuing a B.Tech in Electronics Engineering (VLSI Design & Technology) at CVR College of Engineering. My learning spans digital logic, FSM design, Verilog, SystemVerilog verification, CMOS basics and microcontrollers.</p><br><p>I’m especially interested in opportunities where I can learn from real engineering challenges, contribute to a team and strengthen my practical design skills.</p></div>
+<div class="card"><h3 style="margin-top:0">Areas I’m exploring</h3><div class="focus"><span class="pill">RTL Design</span><span class="pill">Functional Verification</span><span class="pill">VLSI Design</span><span class="pill">Digital Logic</span><span class="pill">Embedded Systems</span><span class="pill">Hardware Prototyping</span></div></div>
+</div>
+</section>
+
+<section id="projects">
+<div class="section-head"><div><div class="kicker">02 / Selected work</div><h2>Projects with purpose.</h2></div><p>Projects shared on LinkedIn and listed in my resume, with tools and measured results where available.</p></div>
+<div class="projects">
+
+<article class="project"><div class="project-top"><span class="number">PROJECT 01 · LINKEDIN</span><span class="tag">RTL Mini Project</span></div><h3>Recipe Recommendation & Execution System</h3><p>Designed a Verilog HDL system that recommends recipes from available ingredients—rice, dal, vegetables and spices—and generates cooking steps sequentially using clock-driven logic.</p><div class="tags"><span class="tag">Verilog HDL</span><span class="tag">Vivado</span><span class="tag">Cadence Genus</span><span class="tag">RTL Design</span></div><div style="margin-top:16px;padding:13px;background:rgba(100,228,232,.06);border:1px solid rgba(100,228,232,.16);border-radius:12px"><strong style="color:var(--cyan)">Synthesis metrics</strong><p style="margin:5px 0 0;font-size:.85rem">Area: 449.599 units · Power: 35.4 µW<br>Delay: 132 ps · Positive slack: +5818 ps</p></div></article>
+<article class="project"><div class="project-top"><span class="number">PROJECT 02 · LINKEDIN</span><span class="tag">VLSI · CMOS / FinFET</span></div><h3>Design and Simulation-Based Performance Optimization of a 90 nm CMOS Broadband Low-Noise Amplifier (LNA) Using Cadence Virtuoso</h3><p>Designed and simulated a 90 nm CMOS broadband Low-Noise Amplifier (LNA) for wireless communication receivers, focusing on amplifying weak RF signals while minimizing added noise. Work included transistor-level CMOS circuit design, GPDK 90 nm technology, schematic and testbench development, transient-response simulation, and power and delay analysis.</p><div class="tags"><span class="tag">Cadence Virtuoso 6.1.8</span><span class="tag">GPDK 90 nm</span><span class="tag">CMOS</span><span class="tag">LNA</span><span class="tag">Transient Simulation</span></div><div style="margin-top:16px;padding:13px;background:rgba(100,228,232,.06);border:1px solid rgba(100,228,232,.16);border-radius:12px"><strong style="color:var(--cyan)">Reported simulation results</strong><p style="margin:5px 0 0;font-size:.85rem">Power consumption: 4.69 nW · Delay: 56.76 ps</p></div></article>
+ 
+<article class="project"><div class="project-top"><span class="number">PROJECT · LINKEDIN</span><span class="tag">Digital Design</span></div><h3>Digital Glitch Filter</h3><p>Designed a digital glitch filter in Verilog HDL to reject short, unwanted pulses and allow stable input signals to pass after a defined period. The design was verified through simulation to check its filtering behavior.</p><div class="tags"><span class="tag">Verilog HDL</span><span class="tag">Vivado</span><span class="tag">Digital Design</span><span class="tag">Simulation</span></div></article>
+
+
+<article class="project"><div class="project-top"><span class="number">PROJECT 03</span><span class="tag">Hardware</span></div><h3>Arduino-Based Smart Street Light Insect Prevention System</h3><p>Designed an Arduino-based system aimed at reducing night-time road accidents caused by insects around street lights, using automated lighting triggers and an insect-repelling mechanism.</p><div class="tags"><span class="tag">Arduino</span><span class="tag">Embedded Hardware</span><span class="tag">Road Safety</span></div></article>
+<article class="project"><div class="project-top"><span class="number">PROJECT 04</span><span class="tag">Verification</span></div><h3>SystemVerilog Packet Parser Verification (CRC-8)</h3><p>Implemented an FSM-based packet parser and verified valid and corrupted CRC payloads using a modular testbench architecture with interface, driver, monitor and scoreboard.</p><div class="tags"><span class="tag">SystemVerilog</span><span class="tag">CRC-8</span><span class="tag">Cadence SimVision</span></div></article>
+<article class="project"><div class="project-top"><span class="number">PROJECT 05</span><span class="tag">RTL Design</span></div><h3>UART Transceiver & Digital Controllers</h3><p>Designed UART TX/RX modules with FIFO buffers and FSM controllers for vending and washing machines, then validated logic behavior through functional simulations.</p><div class="tags"><span class="tag">Verilog HDL</span><span class="tag">Vivado</span><span class="tag">FSM</span></div></article>
+<article class="project"><div class="project-top"><span class="number">PROJECT 06</span><span class="tag">Hardware</span></div><h3>Digital Counting Voting Machine</h3><p>Built a two-candidate voting counter using IC 4026 decade counters, 7-segment LED displays and debounced push-button inputs.</p><div class="tags"><span class="tag">IC 4026</span><span class="tag">Digital Electronics</span><span class="tag">7-Segment Display</span></div></article>
+</div>
+</section>
+
+<section id="skills">
+<div class="section-head"><div><div class="kicker">03 / Toolkit</div><h2>Skills & technologies.</h2></div><p>Tools and concepts I’ve worked with through coursework, training and projects.</p></div>
+<div class="skills-grid">
+<div class="card skill"><h3>HDLs & Verification</h3><span class="pill">Verilog HDL</span><span class="pill">SystemVerilog</span><span class="pill">Testbench basics</span></div>
+<div class="card skill"><h3>EDA & Simulation</h3><span class="pill">Cadence SimVision</span><span class="pill">Cadence Virtuoso</span><span class="pill">Vivado</span><span class="pill">Synopsys</span><span class="pill">Multisim</span><span class="pill">EasyEDA</span></div>
+<div class="card skill"><h3>Programming & Tools</h3><span class="pill">C</span><span class="pill">Python</span><span class="pill">Linux Shell</span><span class="pill">Git</span><span class="pill">GitHub</span></div>
+<div class="card skill"><h3>Core Concepts</h3><span class="pill">Digital Logic Design</span><span class="pill">FSM Design</span><span class="pill">CMOS Basics</span><span class="pill">Microcontrollers</span><span class="pill">Embedded Hardware</span></div>
+</div>
+</section>
+
+<section id="journey">
+<div class="section-head"><div><div class="kicker">04 / Education & growth</div><h2>My learning journey.</h2></div></div>
+<div class="timeline">
+<div class="timeline-item"><div class="year">2024 – 2028</div><div><h3>B.Tech · Electronics Engineering (VLSI Design & Technology)</h3><p>CVR College of Engineering · 3rd Year, 1st Semester · CGPA: 8.43</p></div></div>
+<div class="timeline-item"><div class="year">2024</div><div><h3>Class XII · MPC</h3><p>Telangana State Board of Intermediate Education · 910 / 1000 · Grade A</p></div></div>
+<div class="timeline-item"><div class="year">2022</div><div><h3>Class X · SSC</h3><p>Sister Nivedita School, Karimnagar · CGPA: 9.8 / 10.0</p></div></div>
+</div>
+<div style="margin-top:30px" class="card"><h3 style="margin-top:0">Certifications, training & engagement</h3><div class="timeline">
+<div class="timeline-item"><div class="year">Training</div><div><h3>Design & Analysis of Sequential Circuits using Synopsys Tools</h3><p>Chips to Startup (C2S) Programme</p></div></div>
+<div class="timeline-item"><div class="year">10 Weeks</div><div><h3>Embedded System Developer Virtual Internship</h3><p>AICTE–EduSkills & Microchip · Grade O</p></div></div>
+<div class="timeline-item"><div class="year">Training</div><div><h3>Embedded Systems, PCB Architecture & CAD/3D Printing</h3><p>thingQbator, NASSCOM Foundation</p></div></div>
+<div class="timeline-item"><div class="year">Internships</div><div><h3>AICTE Virtual Internships</h3><p>Network Security & Infrastructure · Zscaler and Juniper Networks</p></div></div>
+<div class="timeline-item"><div class="year">Events</div><div><h3>HackWithHyderabad 3.0 · Eureka 2026 & Ideathon · EmbeddedX Hackathon</h3><p>Participated in an 8-hour sprint at Microsoft Office Hyderabad; Team Nyquist member at CVR College of Engineering; hardware and microcontroller implementation challenge participant.</p></div></div>
+</div></div>
+</section>
+
+<section id="contact">
+<div class="contact-box"><div><div class="kicker">05 / Get in touch</div><h2>Let’s build something meaningful.</h2><p>Open to connecting, learning and collaborating on VLSI, RTL and embedded-systems projects.</p></div><div class="contact-links"><a class="btn primary" href="mailto:moolumurisrivarsha7225@gmail.com">Email me ↗</a><a class="btn" href="https://www.linkedin.com/in/moolumuri-srivarsha/" target="_blank" rel="noreferrer">LinkedIn ↗</a><a class="btn" href="https://github.com/Moolumuri-Srivarsha" target="_blank" rel="noreferrer">GitHub ↗</a></div></div>
+<p style="color:var(--muted);font-size:.9rem;margin-top:18px">Hyderabad, Telangana, India · +91 72072 87225</p>
+</section>
+</div>
+</main>
+<footer><div class="wrap foot"><span>© 2026 Moolumuri Srivarsha</span><span>Designed with curiosity & built for the web.</span></div></footer>
+<script>
+const menu=document.getElementById('menu'),links=document.getElementById('navlinks');
+menu.addEventListener('click',()=>links.classList.toggle('open'));
+links.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>links.classList.remove('open')));
+</script>
+</body>
+</html>
